@@ -1,5 +1,4 @@
 # Pinger
-### A full-stack server pinging application. 
-* Client: Angular 16; 
+### Backend of a full-stack server pinging application. 
 * Server: Spring Boot
 * Database: MySQL
