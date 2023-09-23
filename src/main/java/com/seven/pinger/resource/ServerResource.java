@@ -97,6 +97,6 @@ public class ServerResource {
         try(InputStream byteStream = new ClassPathResource("static/servers/"+name, getClass().getClassLoader()).getInputStream()){
             return Optional.of(byteStream).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND)).readAllBytes();
         }
-        catch (IOException ex){throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR);}
+        catch (IOException ex){throw new ResponseStatusException(HttpStatus.NOT_FOUND);}
     }
 }
