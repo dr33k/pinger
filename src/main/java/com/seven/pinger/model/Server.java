@@ -14,7 +14,6 @@ import java.time.ZonedDateTime;
 @Entity
 @Table(name = "server")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class Server {
     @Id
@@ -32,4 +31,14 @@ public class Server {
     private ZonedDateTime createdAt;
     @UpdateTimestamp
     private ZonedDateTime updatedAt;
+
+    public Server(Long id, String ipAddress, String name, String memory, String type, String imageUrl, Status status) {
+        this.id = id;
+        this.ipAddress = ipAddress;
+        this.name = name;
+        this.memory = memory;
+        this.type = type;
+        this.imageUrl = imageUrl;
+        this.status = status;
+    }
 }

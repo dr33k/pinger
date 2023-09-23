@@ -12,10 +12,10 @@ import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.io.IOException;
 import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.util.List;
 
 @Service
@@ -82,6 +82,8 @@ public class ServerServiceImplementation implements ServerService {
     }
 
     private String getServerImageUrl() {
-        return null;
+        String[] imageNames = {"1.png", "2.png", "3.png", "4.png"};
+        String name = imageNames[(int)(Math.random() * 4)];
+        return "servers/server-image/"+name;
     }
 }
