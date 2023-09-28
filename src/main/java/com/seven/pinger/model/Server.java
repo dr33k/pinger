@@ -32,6 +32,7 @@ public class Server {
     @UpdateTimestamp
     private ZonedDateTime updatedAt;
 
+    public Server(String ipAddress){this.ipAddress = ipAddress;}
     public Server(Long id, String ipAddress, String name, String memory, String type, String imageUrl, Status status) {
         this.id = id;
         this.ipAddress = ipAddress;

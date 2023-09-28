@@ -39,12 +39,12 @@ public class ServerServiceImplementation implements ServerService {
     public Server ping(String ipAddress){
         log.info("Pinging server ip {}", ipAddress);
 
-        Server server = serverRepository.findByIpAddress(ipAddress).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
+        Server server = serverRepository.findByIpAddress(ipAddress).orElse(new Server(ipAddress));
         try {
             InetAddress inetAddress = InetAddress.getByName(ipAddress);
             server.setStatus(inetAddress.isReachable(10000) ? Status.SERVER_UP : Status.SERVER_DOWN);
 
-            serverRepository.save(server);
+            if(server.getId() != null) serverRepository.save(server);
             return server;
         }
         catch (IOException ex){ throw new RuntimeException(ex.getMessage());}
