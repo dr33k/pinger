@@ -15,8 +15,8 @@
 
 Then run
 
-    .\mvnw spring-boot:run 
+    .\gradlew bootRun
 in powershell or
 
-    mvnw spring-boot:run 
+    gradlew bootRun 
 in any other terminal
