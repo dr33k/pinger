@@ -4,4 +4,5 @@
 * Database: MySQL
 
 ### Run
-./mvnw spring-boot:run
+.\mvnw spring-boot:run (powershell)
+mvnw spring-boot:run (command prompt)
