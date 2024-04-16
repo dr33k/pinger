@@ -20,3 +20,5 @@ in powershell or
 
     gradlew bootRun 
 in any other terminal
+
+Then access it with the client application, pinger-client in my list of repositories
