@@ -1,7 +1,7 @@
 # Pinger
 ### Backend of a full-stack server pinging application. 
 * Server: Spring Boot
-* Database: MySQL
+* Database: MySQL 
 
 ### Run
  Have a MYSQL instance running with these credentials
